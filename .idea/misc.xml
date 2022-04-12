@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/miracle/AndroidStudioProjects/ArrowNews/app/src/main/res/drawable/favorite_news_selector.xml" value="0.214" />
+        <entry key="..\:/Users/miracle/AndroidStudioProjects/ArrowNews/app/src/main/res/drawable/nav_view_background_drawable.xml" value="0.214" />
+        <entry key="..\:/Users/miracle/AndroidStudioProjects/ArrowNews/app/src/main/res/drawable/nav_view_background_selector.xml" value="0.214" />
+        <entry key="..\:/Users/miracle/AndroidStudioProjects/ArrowNews/app/src/main/res/drawable/news_outline_background.xml" value="0.214" />
+        <entry key="..\:/Users/miracle/AndroidStudioProjects/ArrowNews/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/miracle/AndroidStudioProjects/ArrowNews/app/src/main/res/layout/alternate_news_outline_layout.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/miracle/AndroidStudioProjects/ArrowNews/app/src/main/res/layout/fragment_headlines.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/miracle/AndroidStudioProjects/ArrowNews/app/src/main/res/layout/main_news_outline_layout.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/miracle/AndroidStudioProjects/ArrowNews/app/src/main/res/menu/main_activity_nav_menu.xml" value="0.20677083333333332" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

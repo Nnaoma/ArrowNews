@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryVariant">@color/white</color>
+    <color name="colorOnPrimary">@color/black</color>
+
+    <color name="colorSecondary">@color/black</color>
+    <color name="colorSecondaryVariant">#1C1C1C</color>
+    <color name="colorOnSecondary">@color/white</color>
+
+    <color name="colorSurface">@color/white</color>
+    <color name="colorOnSurface">@color/black</color>
+
+    <color name="colorBackground">@color/white</color>
+    <color name="colorOnBackground">@color/black</color>
+
+    <color name="normal_nav_view_item_color">@color/black</color>
+    <color name="selected_nav_view_item_color">@color/white</color>
+
+    <color name="selected_nav_view_background">#dd78909C</color>
+
+    <color name="news_items_background_color">#dedede</color>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/headline" android:title="@string/headline" android:icon="@drawable/headline_24" android:checked="true"/>
+        <item android:id="@+id/business" android:title="@string/business" android:icon="@drawable/business_24"/>
+        <item android:id="@+id/entertainment" android:title="@string/entertainment" android:icon="@drawable/entertainment_24"/>
+        <item android:id="@+id/health" android:title="@string/health" android:icon="@drawable/health_24"/>
+        <item android:id="@+id/science" android:title="@string/science" android:icon="@drawable/science_24"/>
+        <item android:id="@+id/sports" android:title="@string/sports" android:icon="@drawable/sports_24"/>
+        <item android:id="@+id/technology" android:title="@string/technology" android:icon="@drawable/technology_24"/>
+    </group>
+
+    <group android:checkableBehavior="none">
+        <item android:title="@string/others">
+            <menu>
+                <item android:id="@+id/settings" android:title="@string/settings" android:icon="@drawable/settings_24"/>
+                <item android:id="@+id/about" android:title="@string/about" android:icon="@drawable/about_24"/>
+                <item android:id="@+id/share" android:title="@string/share" android:icon="@drawable/share_24"/>
+            </menu>
+        </item>
+    </group>
+</menu>
