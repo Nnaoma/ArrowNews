@@ -18,4 +18,6 @@
     <color name="selected_nav_view_item_color">@color/white</color>
 
     <color name="news_items_background_color">@color/colorSurface</color>
+
+    <color name="load_state_views_color">#37A1F4</color>
 </resources>

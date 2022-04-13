@@ -23,6 +23,7 @@
             android:textColor="@color/colorOnPrimary"
             android:textSize="18sp"
             android:textStyle="bold"
+            android:gravity="start|center_vertical"
             app:layout_constrainedHeight="true"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toStartOf="@id/imageview"

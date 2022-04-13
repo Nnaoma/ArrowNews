@@ -23,4 +23,6 @@
     <color name="selected_nav_view_background">#dd78909C</color>
 
     <color name="news_items_background_color">#dedede</color>
+
+    <color name="load_state_views_color">#016BBD</color>
 </resources>
