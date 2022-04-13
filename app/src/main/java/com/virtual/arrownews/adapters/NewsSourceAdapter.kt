@@ -19,7 +19,7 @@ class NewsSourceAdapter :
     companion object {
         val diffUtil = object : DiffUtil.ItemCallback<News>() {
             override fun areItemsTheSame(oldItem: News, newItem: News) =
-                oldItem.publishedAt == newItem.publishedAt
+                oldItem.description == newItem.description
 
             override fun areContentsTheSame(oldItem: News, newItem: News) = oldItem == newItem
 

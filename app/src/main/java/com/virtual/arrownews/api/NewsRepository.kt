@@ -17,8 +17,9 @@ class NewsRepository @Inject constructor(private val api: NewsApi) {
         language: String = "en"
     ) = Pager(
         config = PagingConfig(
-            pageSize = 15,
-            maxSize = 50,
+            pageSize = 10,
+            maxSize = 100,
+            initialLoadSize = 30,
         ), pagingSourceFactory = { NewsPagerSource(api = api, category = category, language = language) }
     ).liveData
 }

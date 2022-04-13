@@ -1,12 +1,15 @@
 package com.virtual.arrownews
 
 import android.content.res.Configuration
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import com.virtual.arrownews.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -15,6 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var mainActivityBinding : ActivityMainBinding
     private lateinit var actionBarDrawerToggle : ActionBarDrawerToggle
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +30,17 @@ class MainActivity : AppCompatActivity() {
         mainActivityBinding.root.addDrawerListener(actionBarDrawerToggle)
         actionBarDrawerToggle.syncState()
 
+        val navHost = supportFragmentManager.findFragmentById(R.id.fragments_container) as NavHostFragment
+        navController = navHost.findNavController()
+
+        mainActivityBinding.swipeAndRefresh.setOnRefreshListener {
+            //val currentScreen = navController.currentDestination?.id
+            val currentScreen = supportFragmentManager.primaryNavigationFragment?.childFragmentManager?.primaryNavigationFragment
+            if (currentScreen != null && currentScreen is RefreshAdapter) {
+                currentScreen.refreshAdapter()
+            }
+            mainActivityBinding.swipeAndRefresh.isRefreshing = false
+        }
     }
 
     override fun onSupportNavigateUp() = findNavController(R.id.fragments_container).navigateUp()
@@ -44,4 +59,8 @@ class MainActivity : AppCompatActivity() {
         super.onOptionsItemSelected(item)
         return actionBarDrawerToggle.onOptionsItemSelected(item)
     }
+}
+
+interface RefreshAdapter{
+    fun refreshAdapter()
 }
