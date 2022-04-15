@@ -10,6 +10,6 @@ import javax.inject.Inject
 @HiltViewModel
 class HeadlinesViewModel @Inject constructor(private val repository: NewsRepository) : ViewModel() {
 
-    fun getHeadlines() = repository.getHeadlineCategory().cachedIn(viewModelScope)
+    fun getHeadlines(category: String, language: String) = repository.getHeadlineCategory(category = category, language = language).cachedIn(viewModelScope)
 
 }

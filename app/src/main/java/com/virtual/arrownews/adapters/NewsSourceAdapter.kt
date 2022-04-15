@@ -61,7 +61,7 @@ class NewsSourceAdapter :
         fun bind(news: News) {
             binding.apply {
                 description.text = news.description
-                //sourceName.text = news.source.name ?: " "
+                sourceName.text = news.name
                 Glide.with(root).load(news.urlToImage).centerCrop()
                     .transition(DrawableTransitionOptions.withCrossFade())
                     .diskCacheStrategy(DiskCacheStrategy.ALL).error(R.drawable.error_24)
@@ -75,7 +75,7 @@ class NewsSourceAdapter :
         fun bind(news: News) {
             binding.apply {
                 description.text = news.description
-                //sourceName.text = news.source.name ?: " "
+                sourceName.text = news.name
                 Glide.with(root).load(news.urlToImage).centerCrop()
                     .transition(DrawableTransitionOptions.withCrossFade())
                     .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)

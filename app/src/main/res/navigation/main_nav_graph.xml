@@ -7,7 +7,19 @@
 
     <fragment
         android:id="@+id/headline"
-        android:name="com.virtual.arrownews.ui.HeadlinesFragment"
-        android:label="fragment_headlines"
+        android:name="com.virtual.arrownews.ui.screens.HeadlinesFragment"
+        android:label="Headlines"
+        tools:layout="@layout/fragment_headlines" />
+
+    <fragment
+        android:id="@+id/business"
+        android:name="com.virtual.arrownews.ui.screens.BusinessFragment"
+        android:label="Business"
+        tools:layout="@layout/fragment_headlines" />
+
+    <fragment
+        android:id="@+id/entertainment"
+        android:name="com.virtual.arrownews.ui.screens.EntertainmentFragment"
+        android:label="Headlines"
         tools:layout="@layout/fragment_headlines" />
 </navigation>

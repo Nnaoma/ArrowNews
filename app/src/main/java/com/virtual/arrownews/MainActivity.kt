@@ -10,6 +10,7 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.virtual.arrownews.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -32,6 +33,8 @@ class MainActivity : AppCompatActivity() {
 
         val navHost = supportFragmentManager.findFragmentById(R.id.fragments_container) as NavHostFragment
         navController = navHost.findNavController()
+
+        mainActivityBinding.bottomNavView.setupWithNavController(navController)
 
         mainActivityBinding.swipeAndRefresh.setOnRefreshListener {
             //val currentScreen = navController.currentDestination?.id

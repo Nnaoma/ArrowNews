@@ -12,10 +12,8 @@ import com.virtual.arrownews.adapters.NewsSourceAdapter
 import com.virtual.arrownews.adapters.NewsSourceLoadStateAdapter
 import com.virtual.arrownews.databinding.FragmentHeadlinesBinding
 import com.virtual.arrownews.models.HeadlinesViewModel
-import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
-class HeadlinesFragment : Fragment(R.layout.fragment_headlines), RefreshAdapter {
+open class GenericFragment : Fragment(R.layout.fragment_headlines), RefreshAdapter {
 
     private val viewModel by viewModels<HeadlinesViewModel>()
     private var headlinesFragmentBinding: FragmentHeadlinesBinding? = null
@@ -51,10 +49,6 @@ class HeadlinesFragment : Fragment(R.layout.fragment_headlines), RefreshAdapter 
 
         }
 
-        viewModel.getHeadlines().observe(viewLifecycleOwner) {
-            initialAdapter.submitData(viewLifecycleOwner.lifecycle, it)
-        }
-
         headlinesFragmentBinding?.apply {
             recyclerView.setHasFixedSize(true)
             recyclerView.adapter = initialAdapter.withLoadStateFooter(NewsSourceLoadStateAdapter{
@@ -72,5 +66,11 @@ class HeadlinesFragment : Fragment(R.layout.fragment_headlines), RefreshAdapter 
         val adapter = headlinesFragmentBinding?.recyclerView?.adapter
         if (adapter != null && adapter is ConcatAdapter)
             initialAdapter.refresh()
+    }
+
+    open fun observeHeadline(category: String, language: String = "en"){
+        viewModel.getHeadlines(category = category, language = language).observe(viewLifecycleOwner) {
+            initialAdapter.submitData(viewLifecycleOwner.lifecycle, it)
+        }
     }
 }
