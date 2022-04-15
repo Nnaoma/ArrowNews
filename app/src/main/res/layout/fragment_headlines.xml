@@ -11,9 +11,10 @@
         android:layout_width="16dp"
         android:layout_height="16dp"
         android:layout_gravity="center"
-        android:background="#00000000"
         android:indeterminate="true"
         android:visibility="gone"
+        app:indicatorColor="@color/colorBackground"
+        app:indicatorSize="30dp"
         app:trackColor="@color/load_state_views_color"
         app:trackThickness="3dp"
         tools:visibility="visible" />

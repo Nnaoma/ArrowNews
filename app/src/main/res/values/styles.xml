@@ -38,7 +38,7 @@
 
     <style name="navItemTextAppearance" parent="TextAppearance.MaterialComponents.Headline1">
         <item name="textAllCaps">true</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 </resources>

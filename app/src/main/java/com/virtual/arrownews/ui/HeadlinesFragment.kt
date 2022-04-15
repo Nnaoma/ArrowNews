@@ -55,13 +55,11 @@ class HeadlinesFragment : Fragment(R.layout.fragment_headlines), RefreshAdapter 
             initialAdapter.submitData(viewLifecycleOwner.lifecycle, it)
         }
 
-        val concatAdapter = initialAdapter.withLoadStateFooter(NewsSourceLoadStateAdapter{
-            initialAdapter.retry()
-        })
-
         headlinesFragmentBinding?.apply {
             recyclerView.setHasFixedSize(true)
-            recyclerView.adapter = concatAdapter
+            recyclerView.adapter = initialAdapter.withLoadStateFooter(NewsSourceLoadStateAdapter{
+                initialAdapter.retry()
+            })
         }
     }
 

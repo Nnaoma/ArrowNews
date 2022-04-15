@@ -14,7 +14,7 @@ class NewsApiRetrofitProvider {
 
     @Singleton
     @Provides
-    fun provideRetrofit() : Retrofit = Retrofit.Builder().baseUrl("https://newsapi.org/v2/")
+    fun provideRetrofit() : Retrofit = Retrofit.Builder().baseUrl("https://api.newscatcherapi.com/v2/")
         .addConverterFactory(GsonConverterFactory.create()).build()
 
     @Singleton

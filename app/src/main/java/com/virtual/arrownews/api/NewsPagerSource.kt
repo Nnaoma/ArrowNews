@@ -1,5 +1,6 @@
 package com.virtual.arrownews.api
 
+import android.util.Log
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.virtual.arrownews.data.News
@@ -24,8 +25,10 @@ class NewsPagerSource(
                 nextKey = if (headlines.articles.isEmpty()) null else page + 1
             )
         }catch (exception: IOException){
+            Log.e("Load Exception", exception.toString())
             LoadResult.Error(exception)
         }catch (exception: HttpException){
+            Log.e("Load Exception", exception.toString())
             LoadResult.Error(exception)
         }
     }

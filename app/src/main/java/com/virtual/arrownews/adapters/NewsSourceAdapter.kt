@@ -19,7 +19,7 @@ class NewsSourceAdapter :
     companion object {
         val diffUtil = object : DiffUtil.ItemCallback<News>() {
             override fun areItemsTheSame(oldItem: News, newItem: News) =
-                oldItem.description == newItem.description
+                oldItem._id == newItem._id
 
             override fun areContentsTheSame(oldItem: News, newItem: News) = oldItem == newItem
 
@@ -61,7 +61,7 @@ class NewsSourceAdapter :
         fun bind(news: News) {
             binding.apply {
                 description.text = news.description
-                sourceName.text = news.source.name
+                //sourceName.text = news.source.name ?: " "
                 Glide.with(root).load(news.urlToImage).centerCrop()
                     .transition(DrawableTransitionOptions.withCrossFade())
                     .diskCacheStrategy(DiskCacheStrategy.ALL).error(R.drawable.error_24)
@@ -75,10 +75,10 @@ class NewsSourceAdapter :
         fun bind(news: News) {
             binding.apply {
                 description.text = news.description
-                sourceName.text = news.source.name
+                //sourceName.text = news.source.name ?: " "
                 Glide.with(root).load(news.urlToImage).centerCrop()
                     .transition(DrawableTransitionOptions.withCrossFade())
-                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
                     .into(imageview)
             }
         }

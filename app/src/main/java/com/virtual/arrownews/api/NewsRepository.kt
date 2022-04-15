@@ -13,13 +13,13 @@ import javax.inject.Inject
 class NewsRepository @Inject constructor(private val api: NewsApi) {
 
     fun getHeadlineCategory(
-        category: String = "general",
+        category: String = "news",
         language: String = "en"
     ) = Pager(
         config = PagingConfig(
-            pageSize = 10,
+            pageSize = 30,
             maxSize = 100,
-            initialLoadSize = 30,
+            initialLoadSize = 90,
         ), pagingSourceFactory = { NewsPagerSource(api = api, category = category, language = language) }
     ).liveData
 }

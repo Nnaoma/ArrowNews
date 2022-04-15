@@ -8,12 +8,12 @@ import retrofit2.http.Query
 
 interface NewsApi {
 
-    @Headers("Authorization: ${BuildConfig.NEWS_ACCESS_KEY}")
-    @GET("top-headlines")
+    @Headers("x-api-key: ${BuildConfig.NEWS_ACCESS_KEY}")
+    @GET("latest_headlines")
     suspend fun getHeadlines(
-        @Query("category") category: String,
-        @Query("language") language: String,
+        @Query("topic") category: String,
+        @Query("lang") language: String,
         @Query("page") page: Int,
-        @Query("pageSize") pageSize: Int
+        @Query("page_size") pageSize: Int
     ): NewsResult
 }
