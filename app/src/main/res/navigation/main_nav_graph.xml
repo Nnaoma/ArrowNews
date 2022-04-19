@@ -7,19 +7,73 @@
 
     <fragment
         android:id="@+id/headline"
-        android:name="com.virtual.arrownews.ui.screens.HeadlinesFragment"
+        android:name="com.virtual.arrownews.ui.screens.main.HeadlinesFragment"
         android:label="Headlines"
         tools:layout="@layout/fragment_headlines" />
 
     <fragment
         android:id="@+id/business"
-        android:name="com.virtual.arrownews.ui.screens.BusinessFragment"
+        android:name="com.virtual.arrownews.ui.screens.main.BusinessFragment"
         android:label="Business"
         tools:layout="@layout/fragment_headlines" />
 
     <fragment
+        android:id="@+id/finance"
+        android:name="com.virtual.arrownews.ui.screens.main.FinanceFragment"
+        android:label="Finance"
+        tools:layout="@layout/fragment_headlines" />
+
+    <fragment
+        android:id="@+id/economy"
+        android:name="com.virtual.arrownews.ui.screens.main.EconomyFragment"
+        android:label="Economics"
+        tools:layout="@layout/fragment_headlines" />
+
+    <fragment
+        android:id="@+id/politics"
+        android:name="com.virtual.arrownews.ui.screens.main.PoliticsFragment"
+        android:label="Politics"
+        tools:layout="@layout/fragment_headlines" />
+
+    <fragment
+        android:id="@+id/science"
+        android:name="com.virtual.arrownews.ui.screens.main.ScienceFragment"
+        android:label="Science"
+        tools:layout="@layout/fragment_headlines" />
+
+    <fragment
+        android:id="@+id/technology"
+        android:name="com.virtual.arrownews.ui.screens.main.TechnologyFragment"
+        android:label="Technology"
+        tools:layout="@layout/fragment_headlines" />
+
+    <fragment
+        android:id="@+id/energy"
+        android:name="com.virtual.arrownews.ui.screens.main.EnergyFragment"
+        android:label="Energy"
+        tools:layout="@layout/fragment_headlines" />
+
+    <fragment
         android:id="@+id/entertainment"
-        android:name="com.virtual.arrownews.ui.screens.EntertainmentFragment"
+        android:name="com.virtual.arrownews.ui.screens.main.EntertainmentFragment"
         android:label="Headlines"
+        tools:layout="@layout/fragment_headlines" />
+
+    <fragment
+        android:id="@+id/sports"
+        android:name="com.virtual.arrownews.ui.screens.main.SportsFragment"
+        android:label="Sports"
+        tools:layout="@layout/fragment_headlines" />
+
+    <fragment
+        android:id="@+id/gaming"
+        android:name="com.virtual.arrownews.ui.screens.main.GamingFragment"
+        android:label="Gaming"
+        tools:layout="@layout/fragment_headlines" />
+
+    <fragment
+        android:id="@+id/music"
+        android:name="com.virtual.arrownews.ui.screens.main.MusicFragment"
+        android:label="Music"
         tools:layout="@layout/fragment_headlines" />
 </navigation>

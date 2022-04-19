@@ -68,7 +68,7 @@ open class GenericFragment : Fragment(R.layout.fragment_headlines), RefreshAdapt
             initialAdapter.refresh()
     }
 
-    open fun observeHeadline(category: String, language: String = "en"){
+    fun observeHeadline(category: String, language: String = "en"){
         viewModel.getHeadlines(category = category, language = language).observe(viewLifecycleOwner) {
             initialAdapter.submitData(viewLifecycleOwner.lifecycle, it)
         }

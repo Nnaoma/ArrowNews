@@ -36,12 +36,20 @@ class MainActivity : AppCompatActivity() {
 
         mainActivityBinding.bottomNavView.setupWithNavController(navController)
 
+        //val appbarConfig = AppBarConfiguration(navGraph = navController.graph, drawerLayout = mainActivityBinding.root)
+        //setupActionBarWithNavController(navController = navController, drawerLayout = mainActivityBinding.root)
+
+        navController.addOnDestinationChangedListener{ _, destination, _ ->
+            title = destination.label
+        }
+
         mainActivityBinding.swipeAndRefresh.setOnRefreshListener {
+
             //val currentScreen = navController.currentDestination?.id
             val currentScreen = supportFragmentManager.primaryNavigationFragment?.childFragmentManager?.primaryNavigationFragment
-            if (currentScreen != null && currentScreen is RefreshAdapter) {
+            if (currentScreen != null && currentScreen is RefreshAdapter)
                 currentScreen.refreshAdapter()
-            }
+
             mainActivityBinding.swipeAndRefresh.isRefreshing = false
         }
     }

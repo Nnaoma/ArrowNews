@@ -3,11 +3,16 @@
     <group android:checkableBehavior="single">
         <item android:id="@+id/headline" android:title="@string/headline" android:icon="@drawable/headline_24" android:checked="true"/>
         <item android:id="@+id/business" android:title="@string/business" android:icon="@drawable/business_24"/>
-        <item android:id="@+id/entertainment" android:title="@string/entertainment" android:icon="@drawable/entertainment_24"/>
-        <item android:id="@+id/health" android:title="@string/health" android:icon="@drawable/health_24"/>
+        <item android:id="@+id/finance" android:title="@string/finance" android:icon="@drawable/finance_24"/>
+        <item android:id="@+id/economy" android:title="@string/economy" android:icon="@drawable/economy_24"/>
+        <item android:id="@+id/politics" android:title="@string/politics" android:icon="@drawable/politics_24"/>
         <item android:id="@+id/science" android:title="@string/science" android:icon="@drawable/science_24"/>
+        <item android:id="@+id/technology" android:title="@string/technology" android:icon="@drawable/tech_24"/>
+        <item android:id="@+id/energy" android:title="@string/energy" android:icon="@drawable/energy_24"/>
+        <item android:id="@+id/entertainment" android:title="@string/entertainment" android:icon="@drawable/entertainment_24"/>
         <item android:id="@+id/sports" android:title="@string/sports" android:icon="@drawable/sports_24"/>
-        <item android:id="@+id/technology" android:title="@string/technology" android:icon="@drawable/technology_24"/>
+        <item android:id="@+id/gaming" android:title="@string/gaming" android:icon="@drawable/gaming_24"/>
+        <item android:id="@+id/music" android:title="@string/music" android:icon="@drawable/music_24"/>
     </group>
 
     <group android:checkableBehavior="none">

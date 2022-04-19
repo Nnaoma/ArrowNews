@@ -23,6 +23,7 @@
         <item name="android:navigationBarColor">@color/colorBackground</item>
         <item name="android:windowLightStatusBar" tools:targetApi="23">@bool/lightStatusBar</item>
         <!-- Customize your theme here. -->
+        <item name="android:windowAnimationStyle">@style/ActivityAnimation</item>
     </style>
 
     <style name="ToolbarAppearance" parent="Widget.MaterialComponents.ActionBar.Primary">
@@ -40,5 +41,18 @@
         <item name="textAllCaps">true</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Generic" parent="Theme.ArrowNews">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="ActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/new_activity_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/old_activity_exit</item>
+
+        <item name="android:activityCloseEnterAnimation">@anim/old_activity_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/new_activity_exit</item>
     </style>
 </resources>
